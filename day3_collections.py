@@ -1,9 +1,13 @@
 
+my_string = "peanut is awesome"
+my_string = my_string.split(" ")
+print(my_string)
+
 my_list = ["Robbie", 23, ["the dark", "wasps"]]
 
 print(my_list)
-my_list.pop()# Takes off from the end
-my_list.append("peanut")# Adds to the end
+my_list.pop()
+my_list.append("peanut")
 print(my_list)
 print(my_list[0])
 print(my_list[2])
