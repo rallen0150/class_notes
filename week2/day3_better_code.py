@@ -9,7 +9,13 @@
 def add_item_to_inventory(player):
     item_name = input("What is the item name?\n>")
     item_quantity = int(input("How many?\n>"))
-    player["inventory"][item_name] = {"quantity": item_quantity}
+    # If item is already in inventory, add quantity, DON'T REPLACE
+    if item_name in player["inventory"].keys():
+        # UPDATING QUANTITY OF EXISTING ITEMS
+        player["inventory"][item_name]["quantity"] += item_quantity
+    else:
+        # Adding NEW Items
+        player["inventory"][item_name] = {"quantity": item_quantity}
 
 
 def inspect_inventory(player):
