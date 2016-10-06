@@ -13,3 +13,9 @@ def index_view(request):
     }
     return render(request, "index.html", context)
     # return HttpResponse("I love web programming")
+
+def lyrics_view(request, song_id):
+    context = {
+        "song": Song.objects.get(id=song_id)
+    }
+    return render(request, "lyrics.html", context)
