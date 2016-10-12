@@ -15,4 +15,7 @@ def index_view(request):
     return render(request, "index.html", context)
 
 def about_view(request):
+    print("hello robbie" + "=" * 50)
+    print(request.GET)
+    print(request.POST)
     return render(request, "about.html")
