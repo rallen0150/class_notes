@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import View
 
 from app.models import Chirp
 from app.forms import ChirpForm
@@ -20,3 +21,8 @@ def about_view(request):
     print(request.GET)
     print(request.POST)
     return render(request, "about.html")
+
+class ChirpView(View):
+
+    def get(self, request):
+        return render(request, "chirps.html")
