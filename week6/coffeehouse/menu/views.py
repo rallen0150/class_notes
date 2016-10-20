@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 from django.views.generic.edit import UpdateView, DeleteView
 
-from menu.models import Special
+from menu.models import Special, Profile
+from django.urls import reverse_lazy
 
 class IndexView(ListView):
     template_name = "index.html"
@@ -15,8 +16,16 @@ class IndexView(ListView):
     #     context['object_list'] = Special.objects.all()
     #     return context
 
-class ProfileView(TemplateView):
+class ProfileUpdateView(UpdateView):
     template_name = "profile.html"
+    fields = ('access_level', )
+    success_url = reverse_lazy('profile_view')
+
+    def get_object(self):
+        return Profile.objects.get(user=self.request.user)
+
+    # def get_queryset(self):
+    #     return Profile.objects.filter(user=self.request.user)
 
 class SpecialUpdateView(UpdateView):
     model = Special
