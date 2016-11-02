@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>Welcome to JavaScript Town</h1>
+
+      <p id='meat_text'>
+        Bacon ipsum dolor amet corned beef filet mignon jowl, chuck ham hock porchetta shankle tongue pastrami burgdoggen tenderloin. Tri-tip sausage salami filet mignon meatloaf swine biltong. Cow tongue leberkas shankle capicola rump. Tenderloin andouille ribeye boudin beef ribs. Doner picanha burgdoggen boudin filet mignon. Sausage pancetta tongue pig biltong brisket picanha, ball tip corned beef. Biltong spare ribs meatloaf sirloin pork chop pork belly.
+      </p>
+      <p>
+        I have transcended Python into JavaScript async
+      </p>
+      <p id="clickBye">
+
+      </p>
+
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+        /*
+          console.log('hello world');
+          $("#meat_text").on("click", function(e) {
+            console.log("Clicked!");
+            $('#meat_text').text("Coffee has gone cold. Sounds like dido lyrics.");
+          });
+          */
+
+          var wordArray = ['this', 'is', 'the', 'weirdest', 'project', 'ever'];
+          for (var i = 0; i < wordArray.length; i++) {
+            var newElement = $("<span id =" + i + ">")
+                             .text(wordArray[i] + " ")
+                             .on("click", function(e) {
+                               e.target.remove();
+                              //  console.log("clicked a word");
+                             });
+            $("#clickBye").append(newElement);
+          }
+      </script>
+  </body>
+</html>
