@@ -32,3 +32,8 @@ class SpecialUpdateView(UpdateView):
 class SpecialListAPIView(ListAPIView):
     queryset = Special.objects.all()
     serializer_class = SpecialSerializer
+
+    # def get_queryset(self):
+    #     import time
+    #     time.sleep(1)
+    #     return Special.objects.all
