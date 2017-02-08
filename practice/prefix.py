@@ -13,7 +13,7 @@ def longest_common_prefix(strings):
                 break
     return ''.join(prefix)
 
-answer = longest_common_prefix(['catamaran', 'cat', 'car', 'dog'])
+answer = longest_common_prefix(['catamaran', 'cat', 'car'])
 print(answer)
 
 # def commonprefix(m):
