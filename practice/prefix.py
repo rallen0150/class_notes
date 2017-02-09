@@ -16,6 +16,28 @@ def longest_common_prefix(strings):
 answer = longest_common_prefix(['catamaran', 'cat', 'car'])
 print(answer)
 
+#############################
+# #Added for fun
+word_list = []
+choice = ""
+
+while choice != 'e':
+    choice = input('Would you like to (a)dd a word or (e)nd your list and view the Longest Common Prefix?\n>').lower()
+    if choice == 'a':
+        word = input('Enter a New Word:\n>').lower()
+        word_list.append(word)
+        print("Your word list is: {}\n".format(word_list))
+    elif choice == 'e':
+        break
+    else:
+        print("Invalid Choice!")
+
+new_answer = longest_common_prefix(word_list)
+print(new_answer)
+
+
+
+
 # def commonprefix(m):
 #     "Given a list of pathnames, returns the longest common leading component"
 #     if not m: return ''
