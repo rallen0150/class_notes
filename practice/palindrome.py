@@ -1,7 +1,7 @@
 
 def palindrome(sentence):
     new_sentence = sentence
-    new_sentence = new_sentence.replace(',', '').replace('.', '').replace("'", '').replace('!', '').replace('"', '').replace('?',
+    new_sentence = new_sentence.replace(',', '').replace('.', '').replace("'" , "").replace('!', '').replace('"', '').replace('?',
     '').replace(':', '').replace(';', '').replace('&', '').replace(' ', '').lower()
 
     if new_sentence == new_sentence[::-1]:
