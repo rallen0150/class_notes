@@ -17,15 +17,15 @@ number = randint(1,100)
 x = 0
 
 while x < 10:
-    guess = input("You have {} turns to guess the computer's age:\n>".format(10-x))
+    guess = input("You have {} turns to guess the random number:\n>".format(10-x))
     guess = int(guess)
     if guess < number:
-        print("I am not that Young!")
+        print("Too Small!")
     elif guess > number:
-        print("Wow, you think I'm that OLD?!?!?!")
+        print("Too Big!")
     else:
         print("Amazing! You are correct!")
         break
     x += 1
 if x == 10:
-    print("You couldn't guess it in the alloted turns! The correct age is {}".format(number))
+    print("You couldn't guess it in the alloted turns! The correct number is {}".format(number))
