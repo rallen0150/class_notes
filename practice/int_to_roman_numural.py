@@ -1,4 +1,4 @@
-class py_solution:
+class convert:
     def int_to_Roman(self, number):
         val = [1000, 900, 500, 400,
                100, 90, 50, 40,
@@ -18,4 +18,4 @@ class py_solution:
         return roman_num
 
 number = int(input("Type in a number to convert to roman numeral: "))
-print(py_solution().int_to_Roman(number))
+print(convert().int_to_Roman(number))
