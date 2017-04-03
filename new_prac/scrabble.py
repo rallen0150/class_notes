@@ -1,3 +1,5 @@
+from random import shuffle
+
 scores = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
          "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3,
          "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1,
@@ -6,9 +8,17 @@ scores = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
 
 letters = 'abcdefghijklmnopqrstuvwxyz'*7
 letters = list(letters)
-print(letters)
+shuffle(letters)
+rack = []
+# print(letters)
 
-word = 'zoom'
+for x in range(7):
+    tile = letters.pop(0)
+    rack.append(tile)
+print(rack)
+# print(letters)
+
+word = input("Make a word from the letters in your rack:\n>")
 total = 0
 for letter in word:
     total += scores[letter]
