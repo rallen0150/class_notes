@@ -9,5 +9,8 @@
     return $randomString;
   }
 
-  echo generateRandomString() . "\n";
+  echo generateRandomString() . "\n\n";
+
+  echo rand() . "\n";
+  echo rand(0, 50) . "\n";
 ?>
