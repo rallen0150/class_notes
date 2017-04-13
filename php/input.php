@@ -7,7 +7,7 @@
   <body>
     <form class="" action="info.php" method="post">
       Name: <input type="text" name="name">
-      Age: <input type="text" name="age">
+      Age: <input type="number" name="age">
       Favorite Color: <input type="text" name="color">
       <input type="submit" value="Submit">
     </form>
