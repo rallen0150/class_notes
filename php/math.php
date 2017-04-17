@@ -23,4 +23,12 @@
   foreach ($floatnums as $x) {
     echo round($x, 2)."\n";
   }
+  echo "\n";
+  foreach ($floatnums as $x) {
+    echo ceil($x)."\n";
+  }
+  echo "\n";
+  foreach ($floatnums as $x) {
+    echo floor($x)."\n";
+  }
 ?>
