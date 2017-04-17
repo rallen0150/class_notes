@@ -20,4 +20,28 @@
   echo str_shuffle($sentence) . "\n";
   // How to replace a word
   echo str_replace("world", "Robbie", $sentence) . "\n";
+
+  echo "\n";
+
+  // From a website for another assignment
+  $strings = array('KjgWZC', 'arf12');
+  foreach ($strings as $testcase) {
+      if (ctype_alpha($testcase)) {
+          echo "The string $testcase consists of all letters.\n";
+      } else {
+          echo "The string $testcase does not consist of all letters.\n";
+      }
+  }
+
+  echo "\n";
+
+  $sent = "The quick brown fox is fast as lightning";
+  // \s is for space like \n is for newline
+  echo preg_replace('/\s+/', '', $sent) . "\n";
+
+  echo "\n";
+
+  // removes the final word
+  $sent = "The quick brown fox";
+  echo preg_replace("/\W\w+\s*(\W*)$/", '$1', $sent)."\n";
 ?>
