@@ -22,4 +22,5 @@
   echo add_dig(54) . "\n";
   echo add_dig(67) . "\n";
   echo add_dig(148) . "\n";
+  echo add_dig(59) . "\n";
 ?>
