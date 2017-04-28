@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-
+import time
 import requests
 
 round_num = input("What round would you like to see:\n>")
@@ -9,7 +9,7 @@ soup = BeautifulSoup(x.text, "html.parser")
 # print(soup)
 num = 1
 
-print("Round {} of 2017 NFL Draft\n".format(round_num))
+print("Round {} of 2017 NFL Draft".format(round_num))
 
 ## This is the first way, just the name and college!
 # for draftTable__headline in soup.find_all(class_="draftTable__playerInfo"):
@@ -19,3 +19,4 @@ print("Round {} of 2017 NFL Draft\n".format(round_num))
 ## This is for the name, college and position
 for draftTable__headline in soup.find_all(class_="draftTable__headline"):
     print(draftTable__headline.text.replace("\n", " ").strip())
+    # time.sleep(1) #If I want a slow delay, for after the draft
