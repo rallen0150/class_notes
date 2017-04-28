@@ -9,8 +9,13 @@ soup = BeautifulSoup(x.text, "html.parser")
 # print(soup)
 num = 1
 
-print("\nRound {} of 2017 NFL Draft\n".format(round_num))
+print("Round {} of 2017 NFL Draft\n".format(round_num))
 
-for link in soup.find_all(id="draftcast-draftroundresults"):
-    print(num, link.get("draftTable__playerInfo"))
-    num+=1
+## This is the first way, just the name and college!
+# for draftTable__headline in soup.find_all(class_="draftTable__playerInfo"):
+#     print(num, draftTable__headline.text.replace("\n", " ").strip())
+#     num+=1
+
+## This is for the name, college and position
+for draftTable__headline in soup.find_all(class_="draftTable__headline"):
+    print(draftTable__headline.text.replace("\n", " ").strip())
