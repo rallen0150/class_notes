@@ -18,5 +18,11 @@ print("Round {} of 2017 NFL Draft".format(round_num))
 
 ## This is for the name, college and position
 for draftTable__headline in soup.find_all(class_="draftTable__headline"):
-    print(draftTable__headline.text.replace("\n", " ").strip())
+    ## Way to get the team's initials
+    a = str(draftTable__headline.img).upper()
+    a = a[79:82]
+    print(a, draftTable__headline.text.replace("\n", " ").strip())
+
+    # if a.startswith("http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/"):
+    #     print(a[69:72])
     # time.sleep(1) #If I want a slow delay, for after the draft
