@@ -24,31 +24,52 @@
 # print(MyClass(20))
 ##########################################################
 
-class MyClass:
-    def __init__(self, num):
-        self.num = num
+# class MyClass:
+#     def __init__(self, num):
+#         self.num = num
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         prime=[]
+#         # Sets a limit for the maximum prime number
+#         for a in range(2,self.num):
+#             if a > self.num:
+#                 raise StopIteration
+#             elif self.isprime(a):
+#                 prime.append(a)
+#         return prime
+#     def isprime(self, num):
+#         num = num
+#         num*=1
+#         for divisor in range(2,int(num**0.5)+1):
+#             if num/divisor==int(num/divisor):
+#                 return False
+#         return True
+#
+# x = int(input("Enter a max number to find the prime numbers up to your input: "))
+#
+# for c in MyClass(x):
+#     print (c)
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        prime=[]
-        # Sets a limit for the maximum prime number
-        for a in range(2,self.num):
-            if a > self.num:
-                raise StopIteration
-            elif self.isprime(a):
-                prime.append(a)
-        return prime
-    def isprime(self, num):
-        num = num
-        num*=1
-        for divisor in range(2,int(num**0.5)+1):
-            if num/divisor==int(num/divisor):
+###############################################################
+class PrimeNumbers:
+    def isprime(self, startnumber):
+        self.startnumber = startnumber
+        startnumber*=1
+        for divisor in range(2,int(startnumber**0.5)+1):
+            if startnumber/divisor==int(startnumber/divisor):
                 return False
         return True
 
-x = int(input("Enter a max number to find the prime numbers up to your input: "))
+        prime=[]
 
-for c in MyClass(x):
-    print (c)
+    # Sets a limit for the maximum prime number
+        for a in range(2,startnumber):
+            if MyClass.isprime(startnumber):
+                prime.append(a)
+
+        return prime
+
+print(PrimeNumbers().isprime(7))
