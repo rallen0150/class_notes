@@ -60,16 +60,19 @@ class PrimeNumbers:
         startnumber*=1
         for divisor in range(2,int(startnumber**0.5)+1):
             if startnumber/divisor==int(startnumber/divisor):
-                return False
-        return True
+                # return False
+                continue
+        find_num(startnumber)
 
         prime=[]
 
     # Sets a limit for the maximum prime number
+    def find_num(self, startnumber):
+        self.startnumber = startnumber
         for a in range(2,startnumber):
-            if MyClass.isprime(startnumber):
+            if PrimeNumbers.isprime(startnumber):
                 prime.append(a)
 
         return prime
 
-print(PrimeNumbers().isprime(7))
+print(PrimeNumbers().find_num(7))
