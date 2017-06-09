@@ -1,4 +1,5 @@
 <?php
+  // THIS IS TO REPLACE CHARACTERS IN A STRING
   $phrase = "$123,34.00A";
   // Got this from the internet
   $newString = preg_replace('/[^0-9,.]+/', '', $phrase) . "\n";
