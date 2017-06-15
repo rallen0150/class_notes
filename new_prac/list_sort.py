@@ -25,23 +25,7 @@ def max_min_sort(x):
 ##############################################################
 # Sort the whole list and print it
 def simple_sort(x):
-    x.sort()
-
-##############################################################
-def sort_list(x):
-    new = []
-    for i in range(len(x)):
-        first = x[i]
-        small = first
-        for y in range(1, len(x)):
-            second = x[y]
-            big = second
-            if first > second:
-                small = second
-            else:
-                continue
-        new.append(small)
-    return new
+    return sorted(x)
 
 
 x = [34, 54, 2, .99, 8.93, 20, 65, 22, 30, 47, 64.98, -100, 34, 65, 76.44, -88]
@@ -49,4 +33,3 @@ x = [34, 54, 2, .99, 8.93, 20, 65, 22, 30, 47, 64.98, -100, 34, 65, 76.44, -88]
 print(simple_list(x))
 print(max_min_sort(x))
 print(simple_sort(x))
-print(sort_list(x))
