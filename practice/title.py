@@ -1,7 +1,7 @@
 def titlecase(sentence):
     return sentence.title()
 
-sentence = titlecase("THIS IS A SENTENCE")
+sentence = titlecase("THIS IS A, SENTENCE")
 print(sentence)
 
 def title_case(sentence):
@@ -16,5 +16,5 @@ def title_case(sentence):
         prevchar = x
     return ''.join(sentence1)
 
-sentence = title_case("Hello World it is SO COOL")
+sentence = title_case("Hello World it is SO COOL!")
 print(sentence)
