@@ -14,3 +14,4 @@ for draftTable__headline in soup.find_all(class_="draftTable__headline"):
     team = str(draftTable__headline.img).upper()
     team = team[79:82] #or 69:72
     print(team, draftTable__headline.text.replace("\n", " ").strip())
+    time.sleep(1)
